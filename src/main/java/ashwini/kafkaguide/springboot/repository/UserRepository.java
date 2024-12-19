@@ -1,4 +1,10 @@
 package ashwini.kafkaguide.springboot.repository;
 
-public class UserRepository {
+import ashwini.kafkaguide.springboot.entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 }

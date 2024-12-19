@@ -3,15 +3,15 @@ package ashwini.kafkaguide.springboot.dto;
 
 public class User {
 
-    private String username;
+    private String userName;
     private String userId ;
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getUserId() {
@@ -25,7 +25,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "username='" + userName + '\'' +
                 ", userId='" + userId + '\'' +
                 '}';
     }

@@ -1,11 +1,21 @@
 package ashwini.kafkaguide.springboot.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
-public class User {
+@Entity
+@Table(name = "ash_users")
+public class UserEntity {
 
+    @Column(name = "user_name")
     private String userName;
-    private String userId ;
+
+    @Id
+    @Column(name = "user_id")
+    private Integer userId ;
 
     public String getUserName() {
         return userName;
@@ -15,19 +25,11 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + userName + '\'' +
-                ", userId='" + userId + '\'' +
-                '}';
     }
 }
